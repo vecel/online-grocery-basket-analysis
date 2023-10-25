@@ -38,5 +38,9 @@ medium_orders <- orders %>%
 orders <- NULL
 
 if (!file.exists("./data/processed-data/medium_orders.csv")) {
-  write.csv(medium_orders, file = "./data/processed-data/medium_orders.csv")
+  write.csv(medium_orders, file = "./data/processed-data/medium_orders.csv", row.names = FALSE)
+}
+
+if (!file.exists("./data/processed-data/medium.carts.csv")) {
+  write.csv(medium_carts, file = "./data/processed-data/medium.carts.csv", row.names = FALSE)
 }
